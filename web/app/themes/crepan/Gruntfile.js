@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = function(grunt) {
   // Load all tasks
   require('load-grunt-tasks')(grunt);
@@ -47,7 +48,8 @@ module.exports = function(grunt) {
           // To enable, set sourceMap to true and update sourceMapRootpath based on your install
           sourceMap: true,
           sourceMapFilename: 'assets/css/main.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
+          sourceMapRootpath: '/app/themes/roots/',
+          relativeUrls: true
         }
       },
       build: {
@@ -151,6 +153,15 @@ module.exports = function(grunt) {
           '*.php'
         ]
       }
+    },
+    copy: {
+      bootstrapfonts: {
+        expand: true,
+        flatten: true,
+        cwd: 'assets/vendor/bootstrap/fonts/',
+        src: '**',
+        dest: 'assets/fonts/'
+      }
     }
   });
 
@@ -162,7 +173,8 @@ module.exports = function(grunt) {
     'jshint',
     'less:dev',
     'autoprefixer:dev',
-    'concat'
+    'concat',
+    'copy:bootstrapfonts'
   ]);
   grunt.registerTask('build', [
     'jshint',
@@ -170,6 +182,7 @@ module.exports = function(grunt) {
     'autoprefixer:build',
     'uglify',
     'modernizr',
-    'version'
+    'version',
+    'copy:bootstrapfonts'
   ]);
 };

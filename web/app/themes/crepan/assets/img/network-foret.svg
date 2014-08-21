@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="20"
+   height="20"
+   id="svg5646">
+  <defs
+     id="defs5648" />
+  <metadata
+     id="metadata5651">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-365,-522.36218)"
+     id="layer1">
+    <g
+       transform="matrix(0.17639951,0,0,0.17639951,296.54923,503.90709)"
+       id="g195-4">
+      <circle
+         cx="444.733"
+         cy="161.31"
+         r="52.245998"
+         id="circle197-2"
+         style="fill:#ffffff" />
+      <g
+         id="g199-4">
+        <path
+           d="m -38.65517,18.135378 a 7.1889191,7.1889191 0 1 1 -14.377839,0 7.1889191,7.1889191 0 1 1 14.377839,0 z"
+           transform="matrix(7.392823,0,0,7.392823,783.65074,27.238861)"
+           id="path5097-5-4-7"
+           style="fill:#ffffff;fill-opacity:1;stroke:#00983a;stroke-width:0.95852256;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <g
+           id="g201-5">
+          <polygon
+             points="418.115,167.725 430.336,164.223 413.369,187.806 444.733,179.244 476.099,187.806 459.132,164.223 471.352,167.725 454.385,143.364 462.635,145.232 444.733,118.069 426.832,145.232 435.082,143.364 "
+             id="polygon203-8"
+             style="fill:#00983a" />
+          <g
+             id="g205-5">
+            <polygon
+               points="448.975,182.503 444.733,181.346 440.492,182.503 440.492,198.985 448.975,198.985 "
+               id="polygon207-8"
+               style="fill:#00983a" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

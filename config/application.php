@@ -43,7 +43,7 @@ $table_prefix = getenv('DB_PREFIX') ? getenv('DB_PREFIX') : 'wp_';
  *
  * A corresponding MO file for the chosen language must be installed to app/languages
  */
-define('WPLANG', '');
+define('WPLANG', 'fr_FR');
 
 /**
  * Authentication Unique Keys and Salts
@@ -63,6 +63,7 @@ define('NONCE_SALT',       getenv('NONCE_SALT'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', true);
 define('DISALLOW_FILE_EDIT', true);
+/* define('DISALLOW_FILE_MODS', true); */
 
 /**
  * Bootstrap WordPress

@@ -1,0 +1,63 @@
+.network-icons-sprite(@startx, @starty, @width, @height){
+
+  .network-icon(@name, @x, @y){
+    &.network-icon-@{name}{
+      background-position: -@startx - (@x * @width) -@starty - (@y * @height);
+    }
+  }
+
+  .network-icon(agriculture, 1, 0);
+  .network-icon(biodiversite, 1, 2);
+  .network-icon(dechets, 0, 0);
+  .network-icon(eau, 2, 2);
+  .network-icon(education-a-lenvironnement, 1, 3);
+  .network-icon(energie, 0, 1);
+  .network-icon(foret, 2, 0);
+  .network-icon(jardin, 0, 2);
+  .network-icon(mer-et-littoral, 2, 1);
+  .network-icon(transport, 0, 3);
+  .network-icon(sante, 1, 1);
+}
+
+.network-icon{
+  background: transparent url("../../img/networks-sprite.svg") no-repeat left top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  .network-icons-sprite(0, 0, 20px, 20px);
+
+}
+
+
+
+.network-icon-large{
+  background: transparent url("../../img/networks-sprite.svg") no-repeat left top;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  &{
+    .network-icons-sprite(0, 80px, 22px, 22px);
+  }
+
+}
+
+.list-group-network(@name){
+  .list-group-network-@{name}{
+    background-image: url("../../img/network-@{name}.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 35px;
+  }
+}
+
+.list-group-network(agriculture);
+.list-group-network(biodiversite);
+.list-group-network(dechets);
+.list-group-network(eau);
+.list-group-network(education-a-l-environnement);
+.list-group-network(energie);
+.list-group-network(foret);
+.list-group-network(jardin);
+.list-group-network(mer-et-littoral);
+.list-group-network(transport);
+.list-group-network(sante);

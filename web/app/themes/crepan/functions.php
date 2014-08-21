@@ -32,3 +32,6 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+require_once locate_template('/lib/taxonomies.php');
+require_once locate_template('/lib/carousel.php');

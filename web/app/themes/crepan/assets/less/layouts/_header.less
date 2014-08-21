@@ -1,1 +1,31 @@
-.banner { }
+.top-header,
+.bottom-footer{
+  background-color: #d4d4d4;
+  padding: 2px 0;
+}
+.top-header-nav,
+.bottom-footer-nav{
+  font-size: 0.9em;
+  float: right;
+  margin: 0;
+  padding: 0;
+  > li {
+    display: inline;
+    + li{
+      &:before {
+	content: "| ";
+      }
+    }
+  }
+
+  &,a{
+    color: #7c7c7c;
+    font-style: italic;
+  }
+}
+
+.navbar{
+  margin: 20px 0;
+}
+
+
