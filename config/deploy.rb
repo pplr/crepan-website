@@ -1,5 +1,6 @@
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'crepan-website'
+# set :scm, :none
+set :repo_url, 'git@github.com:pplr/crepan-website.git'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
