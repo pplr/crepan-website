@@ -71,3 +71,5 @@ define('DISALLOW_FILE_EDIT', true);
 if (!defined('ABSPATH')) {
   define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+define('WP_LANG_DIR', $webroot_dir . '/wp/wp-content/languages' );

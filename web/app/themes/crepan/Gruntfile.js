@@ -59,7 +59,8 @@ module.exports = function(grunt) {
           ]
         },
         options: {
-          compress: true
+          compress: true,
+          relativeUrls: true
         }
       }
     },
