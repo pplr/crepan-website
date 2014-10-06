@@ -8120,13 +8120,51 @@ figure.alignnone {
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
 }
-.navbar-nav.navbar-social-networks > li > a {
-  color: #d4d4d4;
-  padding-left: 2px;
-  padding-right: 2px;
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #555555;
 }
-.navbar-nav.navbar-social-networks > li > a:hover {
-  background-color: transparent;
+.navbar-brand.crepan-brand {
+  padding: 0;
+}
+.navbar-brand.crepan-brand img {
+  height: 65px;
+  margin: -10px 0;
+}
+.navbar.navbar-compact {
+  margin: 0;
+  background-color: #d4d4d4;
+  min-height: 0;
+}
+.navbar.navbar-compact .navbar-nav > li {
+  float: left;
+}
+.navbar.navbar-compact .navbar-nav > li > a {
+  padding: 0px 5px;
+}
+.navbar.navbar-compact .navbar-nav > li.social-link {
+  font-size: 1.5em;
+}
+.navbar.navbar-compact .top-header-nav,
+.navbar.navbar-compact .bottom-footer-nav {
+  font-size: 0.9em;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.navbar.navbar-compact .top-header-nav,
+.navbar.navbar-compact .bottom-footer-nav,
+.navbar.navbar-compact .top-header-nav a,
+.navbar.navbar-compact .bottom-footer-nav a {
+  color: #7c7c7c;
+}
+.navbar-right-logo {
+  float: right;
+  margin-top: -12px;
+  margin-bottom: -13px;
+  margin-right: -10px;
+}
+.navbar-right-logo img {
+  height: 70px;
 }
 .panel-crepan {
   border-color: transparent;
@@ -8305,30 +8343,7 @@ figure.alignnone {
 }
 .top-header,
 .bottom-footer {
-  background-color: #d4d4d4;
   padding: 2px 0;
-}
-.top-header-nav,
-.bottom-footer-nav {
-  font-size: 0.9em;
-  float: right;
-  margin: 0;
-  padding: 0;
-}
-.top-header-nav > li,
-.bottom-footer-nav > li {
-  display: inline;
-}
-.top-header-nav > li + li:before,
-.bottom-footer-nav > li + li:before {
-  content: "| ";
-}
-.top-header-nav,
-.bottom-footer-nav,
-.top-header-nav a,
-.bottom-footer-nav a {
-  color: #7c7c7c;
-  font-style: italic;
 }
 .navbar {
   margin: 20px 0;
@@ -8341,8 +8356,12 @@ figure.alignnone {
 .carousel-home-header {
   margin-bottom: 30px;
 }
+.carousel-home-header .item {
+  height: 400px;
+}
 .carousel-home-header img {
   width: 100%;
+  vertical-align: middle;
 }
 .carousel-home-header .carousel-control {
   width: 80px;
@@ -8369,8 +8388,8 @@ figure.alignnone {
     left: 80px;
     width: 30%;
     padding: 0;
-    top: 50%;
-    margin-top: -80px;
+    top: 120px;
+    margin-top: 0;
   }
 }
 .carousel-hot-news {
@@ -8553,5 +8572,24 @@ figure.alignnone {
     right: 20%;
     padding-bottom: 30px;
   }
+}
+.home-article > a {
+  display: block;
+  padding: 20px 0 10px 0;
+  color: inherit;
+}
+.home-article > a:hover {
+  /* text-decoration: inherit; */
+}
+.home-article header > time {
+  font-weight: 300;
+}
+.home-article header h3 {
+  margin: 0 0 10.5px 0;
+  font-size: 19px;
+  font-weight: normal;
+}
+.home-article + .home-article {
+  border-top: 1px solid #ebebeb;
 }
 /*# sourceMappingURL=main.css.map */

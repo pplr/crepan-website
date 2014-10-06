@@ -34,15 +34,59 @@
       transform: rotate(90deg);
     }
   }
+
+  .navbar-toggle .icon-bar {
+    background-color: #555555;
+  }
+
 }
 
-.navbar-nav.navbar-social-networks{
-  > li > a{
-    color: #d4d4d4;
-    padding-left: 2px;
-    padding-right: 2px;
-    &:hover{
-      background-color: transparent;
+.navbar-brand.crepan-brand{
+  padding: 0;
+  img{
+    height: 65px;
+    margin: -10px 0;
+  }
+}
+
+.navbar.navbar-compact{
+  margin: 0;
+  background-color: #d4d4d4;
+  min-height: 0;
+
+  .navbar-nav {
+    > li {
+      float: left;
+      > a {
+	padding: 0px 5px;
+      }
+      &.social-link{
+	font-size: 1.5em;
+      }
     }
+  }
+
+
+  .top-header-nav,
+  .bottom-footer-nav{
+    font-size: 0.9em;
+    float: right;
+    margin: 0;
+    padding: 0;
+
+    &,a{
+      color: #7c7c7c;
+    }
+  }
+
+}
+
+.navbar-right-logo{
+  float: right;
+  margin-top: -12px;
+  margin-bottom: -13px;
+  margin-right: -10px;
+  img{
+    height: 70px;
   }
 }

@@ -6,12 +6,12 @@
 
 <?php wp_footer(); ?>
 
-<footer class="bottom-footer">
+<footer class="bottom-footer navbar navbar-compact">
   <div class="container">
     <nav class="bottom-footer-nav">
       <?php
         if (has_nav_menu('footer_navigation')) :
-          wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'bottom-footer-nav'));
+          wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
         endif;
       ?>
     </nav>

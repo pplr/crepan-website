@@ -1,7 +1,14 @@
-<header class="top-header">
+<header class="top-header navbar navbar-compact">
   <div class="container">
     <nav class="top-header-nav">
-      <a href="#">Espace membre</a> | <a href="#">S’inscrire</a>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="social-link"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+        <li class="social-link"><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+        <li class="social-link"><a href="#"><i class="fa fa-rss"></i></a></li>
+	<li><a href="#">Espace membre</a></li>
+	<li><a href="#">S’inscrire</a></li>
+
+      </ul>
     </nav>
   </div>
 </header>
@@ -15,7 +22,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand crepan-brand" 
+         href="<?php echo esc_url(home_url('/')); ?>">
+	<img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-crepan.svg"/></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
@@ -27,11 +36,9 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
         endif;
       ?>
-      <ul class="nav navbar-nav navbar-social-networks navbar-right">
-        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-      </ul>
+    <div class="navbar-right-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-fne.png"></img>
+    </div>
     </nav>
   </div>
 </header>

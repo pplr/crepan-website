@@ -1,5 +1,4 @@
-<?php
-namespace crepan\carousel;
+<?php namespace crepan\carousel;
 
 $carousel_item_post_type = "carousel_item";
 $carousel_item_category = "carousel_item_category";
@@ -50,6 +49,7 @@ add_action('init', function() {
 
 
 $featured_preview_image_size = 'featured_preview';
+$carousel_image_size = 'homepage-carousel';
 
 // Add theme support for featured images if not already present
 // http://wordpress.stackexchange.com/questions/23839/using-add-theme-support-inside-a-plugin
@@ -57,6 +57,7 @@ add_action( 'after_setup_theme',
 	    function() {
 	      global $featured_preview_image_size;
 	      global $carousel_item_post_type;
+	      global $carousel_image_size;
 	      $supportedTypes = get_theme_support( 'post-thumbnails' );
 	      if( $supportedTypes === false ) {
 		add_theme_support( 'post-thumbnails', array( $carousel_item_post_type ) );
@@ -65,6 +66,7 @@ add_action( 'after_setup_theme',
 		add_theme_support( 'post-thumbnails', $supportedTypes[0] );
 	      }
 	      add_image_size($featured_preview_image_size, 100, 55, true);
+	      add_image_size($carousel_image_size, 1250, 500, true);
 	    }
 	    );
 
@@ -155,6 +157,7 @@ add_action('save_post', function(){
 
 function render_carousel($carousel_id, $css_class){
   global $carousel_item_post_type;
+  global $carousel_image_size;
   $atts = array();
   $args = array( 'post_type' => $carousel_item_post_type, 
 		 'posts_per_page' => '-1', 
@@ -174,7 +177,7 @@ function render_carousel($carousel_id, $css_class){
       $post_id = get_the_ID();
       $title = get_the_title();
       $content = get_the_excerpt();
-      $image = get_the_post_thumbnail( get_the_ID(), 'full');
+      $image = get_the_post_thumbnail( get_the_ID(), $carousel_image_size);
       $url = get_post_meta(get_the_ID(), 'cptbc_image_url', true);
       $url_openblank = get_post_meta(get_the_ID(), 'cptbc_image_url_openblank', true);
       $images[] = array('post_id' => $post_id, 
