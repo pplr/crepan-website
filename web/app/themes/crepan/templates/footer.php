@@ -4,16 +4,19 @@
   </div>
 </footer>
 
-<?php wp_footer(); ?>
-
-<footer class="bottom-footer navbar navbar-compact">
-  <div class="container">
-    <nav class="bottom-footer-nav">
-      <?php
-        if (has_nav_menu('footer_navigation')) :
-          wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
+<footer class="bottom-footer">
+  <div class="navbar navbar-compact">
+    <div class="container">
+      <nav class="bottom-footer-nav">
+	<?php
+           if (has_nav_menu('footer_navigation')) :
+           wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
         endif;
-      ?>
-    </nav>
+	?>
+      </nav>
+    </div>
   </div>
 </footer>
+
+<?php wp_footer(); ?>
+

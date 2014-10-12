@@ -10,6 +10,8 @@
 
       </ul>
     </nav>
+   <p class="top-header-text">Comité Régional d’Étude pour la Protection et l’Aménagement de la Nature en Basse-Normandie</p>
+
   </div>
 </header>
 

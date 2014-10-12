@@ -8128,7 +8128,7 @@ figure.alignnone {
 }
 .navbar-brand.crepan-brand img {
   height: 65px;
-  margin: -10px 0;
+  margin: -12px 0 -8px 0;
 }
 .navbar.navbar-compact {
   margin: 0;
@@ -8139,7 +8139,7 @@ figure.alignnone {
   float: left;
 }
 .navbar.navbar-compact .navbar-nav > li > a {
-  padding: 0px 5px;
+  padding: 2px 5px;
 }
 .navbar.navbar-compact .navbar-nav > li.social-link {
   font-size: 1.5em;
@@ -8156,6 +8156,16 @@ figure.alignnone {
 .navbar.navbar-compact .top-header-nav a,
 .navbar.navbar-compact .bottom-footer-nav a {
   color: #7c7c7c;
+}
+.navbar.navbar-compact .navbar-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+.top-header-text {
+  margin: 0 10px 0 0;
+  line-height: 25px;
+  text-align: center;
 }
 .navbar-right-logo {
   float: right;
@@ -8341,9 +8351,23 @@ figure.alignnone {
   background-position: right 10px center;
   padding-right: 35px;
 }
-.top-header,
-.bottom-footer {
-  padding: 2px 0;
+.page-header-network .network-logo {
+  float: right;
+  height: 60px;
+}
+html,
+body {
+  height: 100%;
+}
+#main-wrapper {
+  min-height: 100%;
+  height: auto!important;
+  height: 100%;
+  margin: 0 auto -25px;
+}
+#respond {
+  margin-top: 40px;
+  border-top: 1px solid #ebebeb;
 }
 .navbar {
   margin: 20px 0;
@@ -8353,11 +8377,15 @@ figure.alignnone {
   text-transform: uppercase;
   font-style: normal;
 }
+.bottom-footer,
+.bottom-footer-push {
+  height: 25px;
+}
 .carousel-home-header {
   margin-bottom: 30px;
-}
-.carousel-home-header .item {
-  height: 400px;
+  /* .item{ */
+  /*   height: 400px; */
+  /* } */
 }
 .carousel-home-header img {
   width: 100%;

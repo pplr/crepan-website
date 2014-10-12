@@ -35,3 +35,4 @@ unset($file, $filepath);
 
 require_once locate_template('/lib/taxonomies.php');
 require_once locate_template('/lib/carousel.php');
+require_once locate_template('/lib/homepage.php');

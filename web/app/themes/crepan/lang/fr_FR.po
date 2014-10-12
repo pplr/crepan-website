@@ -1,0 +1,506 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CREPAN's wordpress theme\n"
+"POT-Creation-Date: 2014-10-12 17:29+0100\n"
+"PO-Revision-Date: 2014-10-12 17:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../index.php:9 ../taxonomy-network.php:17
+msgid "Sorry, no results were found."
+msgstr "Désolé, aucun résultat n'a été trouvé."
+
+#: ../index.php:21 ../taxonomy-network.php:29
+msgid "&larr; Older posts"
+msgstr "&larr; Articles plus anciens"
+
+#: ../index.php:22 ../taxonomy-network.php:30
+msgid "Newer posts &rarr;"
+msgstr "Articles plus récents &rarr;"
+
+#: ../404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "La page demandée n’existe pas."
+
+#: ../404.php:7
+msgid "It looks like this was the result of either:"
+msgstr "Peut être s’agit-il :"
+
+#: ../404.php:9
+msgid "a mistyped address"
+msgstr "d’une faute de frappe ;"
+
+#: ../404.php:10
+msgid "an out-of-date link"
+msgstr "ou d’un lien ancien."
+
+#: ../functions.php:29
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: ../lib/activation.php:28 ../lib/activation.php:29
+msgid "Theme Activation"
+msgstr "Activation du thème"
+
+#: ../lib/activation.php:50
+#, php-format
+msgid "%s Theme Activation"
+msgstr "Activation du thème %s"
+
+#: ../lib/activation.php:52
+msgid ""
+"These settings are optional and should usually be used only on a fresh "
+"installation"
+msgstr ""
+"Ces réglages sont optionnels et sont généralement utiles pour une nouvelle "
+"installation"
+
+#: ../lib/activation.php:59 ../lib/activation.php:62
+msgid "Create static front page?"
+msgstr "Créer une page d'accueil ?"
+
+#: ../lib/activation.php:64 ../lib/activation.php:76 ../lib/activation.php:88
+#: ../lib/activation.php:100
+msgid "Yes"
+msgstr "Oui"
+
+#: ../lib/activation.php:65 ../lib/activation.php:77 ../lib/activation.php:89
+#: ../lib/activation.php:101
+msgid "No"
+msgstr "Non"
+
+#: ../lib/activation.php:67
+msgid "Create a page called Home and set it to be the static front page"
+msgstr "Créer une page \"Home\" et la définir comme page d'accueil statique ?"
+
+#: ../lib/activation.php:71
+msgid "Change permalink structure?"
+msgstr "Modifier la structure des permaliens ?"
+
+#: ../lib/activation.php:74
+msgid "Update permalink structure?"
+msgstr "Mettre à jour la structure des permaliens ?"
+
+#: ../lib/activation.php:79
+msgid "Change permalink structure to /&#37;postname&#37;/"
+msgstr "Changer la structure permaliens en /&#37;postname&#37;/"
+
+#: ../lib/activation.php:83 ../lib/activation.php:86
+msgid "Create navigation menu?"
+msgstr "Créer un menu de navigation ?"
+
+#: ../lib/activation.php:91
+msgid "Create the Primary Navigation menu and set the location"
+msgstr "Créer le menus de navigation primaire et définir sa position"
+
+#: ../lib/activation.php:95 ../lib/activation.php:98
+msgid "Add pages to menu?"
+msgstr "Ajouter les pages au menu ?"
+
+#: ../lib/activation.php:103
+msgid "Add all current published pages to the Primary Navigation"
+msgstr ""
+"Ajouter toutes les pages actuellement publiées à la navigation primaire"
+
+#: ../lib/activation.php:126 ../lib/activation.php:147
+msgid "Home"
+msgstr "Accueil"
+
+#: ../lib/activation.php:173 ../lib/activation.php:176
+#: ../lib/activation.php:190 ../lib/init.php:13
+msgid "Primary Navigation"
+msgstr "Navigation Primaire"
+
+#: ../lib/titles.php:10
+msgid "Latest Posts"
+msgstr "Derniers Articles"
+
+#: ../lib/titles.php:19
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archives quotidiennes : %s"
+
+#: ../lib/titles.php:21
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archives mensuelles : %s"
+
+#: ../lib/titles.php:23
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archives annuelles : %s"
+
+#: ../lib/titles.php:26
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archives d'auteurs : %s"
+
+#: ../lib/titles.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "Résultats de la recherche pour %s"
+
+#: ../lib/titles.php:33
+#, fuzzy
+msgid "Not Found"
+msgstr "Fichier non trouvé"
+
+#: ../lib/taxonomies.php:14
+msgid "Search Networks"
+msgstr "Rechercher un réseau"
+
+#: ../lib/taxonomies.php:15
+msgid "Popular Networks"
+msgstr "Réseaux populaires"
+
+#: ../lib/taxonomies.php:16
+msgid "All Networks"
+msgstr "Tous les réseaux"
+
+#: ../lib/taxonomies.php:19
+msgid "Edit Network"
+msgstr "Modifier le réseau"
+
+#: ../lib/taxonomies.php:20
+msgid "Update Network"
+msgstr "Mettre à jour le réseau"
+
+#: ../lib/taxonomies.php:21
+msgid "Add New Network"
+msgstr "Ajouter"
+
+#: ../lib/taxonomies.php:22
+msgid "New Network Name"
+msgstr "Nom du nouveau réseau"
+
+#: ../lib/taxonomies.php:23
+msgid "Separate networks with commas"
+msgstr "Séparez les réseaux par des virgules"
+
+#: ../lib/taxonomies.php:25
+msgid "Add or remove networks"
+msgstr "Ajouter ou retirer des réseaux"
+
+#: ../lib/taxonomies.php:26
+msgid "Choose from the most used networks"
+msgstr "Choisir parmi les réseaux les plus utilisés"
+
+#: ../lib/taxonomies.php:28
+msgid "No network found."
+msgstr "Aucun réseau trouvé."
+
+#: ../lib/taxonomies.php:29
+msgid "Networks"
+msgstr "Réseaux"
+
+#: ../lib/quote.php:9 ../lib/quote.php:20
+msgid "Quotes"
+msgstr "Citations"
+
+#: ../lib/quote.php:10
+msgid "Quote"
+msgstr "Citation"
+
+#: ../lib/quote.php:11 ../lib/carousel.php:17
+#, fuzzy
+msgid "Add New"
+msgstr "Ajouter"
+
+#: ../lib/quote.php:12
+#, fuzzy
+msgid "Add New Quote"
+msgstr "Ajouter"
+
+#: ../lib/quote.php:13
+msgid "Edit Quote"
+msgstr "Modifier la citation"
+
+#: ../lib/quote.php:14
+msgid "New Quote"
+msgstr "Nouvelle citation"
+
+#: ../lib/quote.php:15
+msgid "View Quote"
+msgstr "Afficher la citation"
+
+#: ../lib/quote.php:16
+#, fuzzy
+msgid "Search Quotes"
+msgstr "Rechercher pour :"
+
+#: ../lib/quote.php:17
+msgid "No Quote"
+msgstr "Aucune citation"
+
+#: ../lib/quote.php:18
+msgid "No Quote found in Trash"
+msgstr "Aucune citation dans la corbeille"
+
+#: ../lib/carousel.php:15
+msgid "Carousel Images"
+msgstr "Images de carousel"
+
+#: ../lib/carousel.php:16
+msgid "Carousel Image"
+msgstr "Image de carousel"
+
+#: ../lib/carousel.php:18
+msgid "Add New Carousel Item"
+msgstr "Ajouter une nouvelle diapositive"
+
+#: ../lib/carousel.php:19
+msgid "Edit Carousel Item"
+msgstr "Modifier la diapositive"
+
+#: ../lib/carousel.php:20
+msgid "New Carousel Item"
+msgstr "Nouvelle diapositive"
+
+#: ../lib/carousel.php:21
+msgid "View Carousel Item"
+msgstr "Voir la diapositive"
+
+#: ../lib/carousel.php:22
+msgid "Search Carousel Items"
+msgstr "Rechercher une diapositive"
+
+#: ../lib/carousel.php:23
+msgid "No Carousel Item"
+msgstr "Aucune diapositive"
+
+#: ../lib/carousel.php:24
+msgid "No Carousel Items found in Trash"
+msgstr "Aucune diapositive dans la corbeille"
+
+#: ../lib/carousel.php:26
+msgid "Carousel Items"
+msgstr "Diapositives"
+
+#: ../lib/carousel.php:68
+msgid "Featured Image"
+msgstr "Image principale"
+
+#: ../lib/carousel.php:124
+msgid "Image URL"
+msgstr "URL de l’image"
+
+#: ../lib/carousel.php:126
+msgid "(optional - leave blank for no link)"
+msgstr "(facultatif - laisser vide si pas de lien)"
+
+#: ../lib/carousel.php:130
+msgid "Open link in new window?"
+msgstr "Ouvrir le lien dans une nouvelle fenêtre ?"
+
+#: ../lib/init.php:17
+#, fuzzy
+msgid "Footer Navigation"
+msgstr "Navigation secondaire"
+
+#: ../lib/init.php:40
+#, fuzzy
+msgid "Primary"
+msgstr "Barre latérale Primaire"
+
+#: ../lib/init.php:49
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ../templates/entry-meta.php:4
+msgid "par"
+msgstr "par"
+
+#: ../templates/searchform.php:2
+msgid "Search for:"
+msgstr "Rechercher pour :"
+
+#: ../templates/searchform.php:4 ../templates/searchform.php:6
+msgid "Search"
+msgstr "Recherche"
+
+#: ../templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Commentaires plus anciens"
+
+#: ../templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: ../templates/comments.php:30 ../templates/comments.php:35
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: ../templates/comments.php:42
+msgid "Leave a Reply"
+msgstr "Répondre"
+
+#: ../templates/comments.php:42
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Répondre à %s"
+
+#: ../templates/comments.php:45
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Vous devez être <a href=\"%s\">connecté</a> pour ajouter un commentaire."
+
+#: ../templates/comments.php:50
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr "Connecté en tant que <a href=\"%s/wp-admin/profile.php\">%s</a>."
+
+#: ../templates/comments.php:51
+msgid "Log out of this account"
+msgstr "Déconnexion de ce compte"
+
+#: ../templates/comments.php:51
+msgid "Log out &raquo;"
+msgstr "Déconnexion &raquo;"
+
+#: ../templates/comments.php:55
+msgid "Name"
+msgstr "Nom"
+
+#: ../templates/comments.php:55 ../templates/comments.php:59
+msgid " (required)"
+msgstr " (obligatoire)"
+
+#: ../templates/comments.php:59
+msgid "Email (will not be published)"
+msgstr "Email (ne sera pas publié)"
+
+#: ../templates/comments.php:63
+msgid "Website"
+msgstr "Site web"
+
+#: ../templates/comments.php:68
+msgid "Comment"
+msgstr "Commentaire"
+
+#: ../templates/comments.php:71
+msgid "Submit Comment"
+msgstr "Ajouter un commentaire"
+
+#: ../templates/comment.php:4
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: ../templates/comment.php:5
+msgid "(Edit)"
+msgstr "(Editer)"
+
+#: ../templates/comment.php:9
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../templates/content-single.php:14
+msgid "Pages:"
+msgstr "Pages :"
+
+#~ msgid ""
+#~ "The page you are looking for might have been removed, had its name "
+#~ "changed, or is temporarily unavailable."
+#~ msgstr ""
+#~ "La page demandée a changé de nom ou est temporairement inaccessible."
+
+#~ msgid "Please try the following:"
+#~ msgstr "Veuillez essayer les actions suivantes :"
+
+#~ msgid "Check your spelling"
+#~ msgstr "Vérifiez votre syntaxe"
+
+#~ msgid "Return to the <a href=\"%s\">home page</a>"
+#~ msgstr "Revenir à la <a href=\"%s\">page d'accueil</a>"
+
+#~ msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+#~ msgstr ""
+#~ "Cliquer sur le bouton <a href=\"javascript:history.back()\">Retour</a>"
+
+#~ msgid "Change uploads folder?"
+#~ msgstr "Changer le dossier d'upload ?"
+
+#~ msgid "Update uploads folder?"
+#~ msgstr "Mettre à jour le dossier d'upload ?"
+
+#~ msgid "Change uploads folder to /assets/ instead of /wp-content/uploads/"
+#~ msgstr ""
+#~ "Changer le dossier d'upload en /assets/ à la place de /wp-content/uploads/"
+
+#~ msgid "Continued"
+#~ msgstr "Suite"
+
+#~ msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
+#~ msgstr ""
+#~ "Veuillez vérifier que votre fichier <a href=\"%s\">.htaccess</a> soit "
+#~ "accessible en écriture"
+
+#~ msgctxt "taxonomy general name"
+#~ msgid "Networks"
+#~ msgstr "Réseaux"
+
+#~ msgctxt "taxonomy singular name"
+#~ msgid "Network"
+#~ msgstr "Réseau"
+
+#~ msgid "Use this widget to add a vCard"
+#~ msgstr "Utiliser ce widget pour ajouter une vCard"
+
+#~ msgid "Roots: vCard"
+#~ msgstr "Roots: vCard"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "<cite class=\"fn\">%s</cite>"
+#~ msgstr "<cite class=\"fn\">%s</cite>"
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view comments."
+#~ msgstr ""
+#~ "Cet article est protégé par mot de passe. Entrez le mot de passe pour "
+#~ "voir les commentaires."
+
+#~ msgid "One Response to &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Une réponse à &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s résponses à &ldquo;%2$s&rdquo;"
+
+#~ msgid "Posted on %s at %s."
+#~ msgstr "Publié le %s à %s."
+
+#~ msgid "Written by"
+#~ msgstr "Rédigé par"
+
+#~ msgid "Title (optional):"
+#~ msgstr "Titre (facultatif) :"
+
+#~ msgid "Street Address:"
+#~ msgstr "Rue :"
+
+#~ msgid "City/Locality:"
+#~ msgstr "Ville/Localité :"
+
+#~ msgid "State/Region:"
+#~ msgstr "État/Région :"
+
+#~ msgid "Zipcode/Postal Code:"
+#~ msgstr "Code Postal :"
+
+#~ msgid "Telephone:"
+#~ msgstr "Téléphone :"
+
+#~ msgid "Email:"
+#~ msgstr "Email :"

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12"> 
-	<?php echo namespace\crepan\carousel\render_carousel("carousel-home-header", "carousel-home-header") ?>
+   <?php echo CrepanCarousel::render("carousel-home-header", "carousel-home-header") ?>
       </div>
     </div>
   </div>
@@ -10,33 +10,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <div class="panel panel-crepan">
-	<div class="panel-heading">Nos réseaux</div>
-	<div class="list-group">
-          <?php foreach (get_terms('network', array('hide_empty' => false)) as $term): ?>
-	  <a class="list-group-item list-group-network-<?php echo $term->slug?>" href="#">
-	    <?php echo $term->name ?>
-	  </a>
-          <?php endforeach; ?>
-	</div>
-      </div>
-
-      <form role="search" 
-	    method="get" 
-	    action="<?php echo esc_url(home_url('/')); ?>">
-
-	<div class="input-group">
-	  <input type="text" class="form-control"
-		 name="s"
-		 placeholder="Rechercher dans le site">
-	  <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-	</div>
-      </form>
-
-    </div>
-
-    <div class="col-md-9">
+    <div class="col-md-9 col-md-push-3">
 
    <?php 
    $args = array(
@@ -54,11 +28,11 @@
 <?php if ( $the_query->have_posts() ) : ?>
 <div id="home-actu-carousel" class="slide carousel carousel-hot-news "
      data-ride="carousel" data-interval="10000">
-  <!-- Carousel items -->
   <div class="carousel-inner">
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <div class="item <?php if($the_query->current_post == 0){echo "active";}?>" data-slide-number="<?php echo $the_query->current_post; ?>">
-      <img class="img-rounded" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), array(800, 600))[0]; ?>"></div>
+      <img class="img-rounded" src="<?php echo
+  wp_get_attachment_image_src(get_post_thumbnail_id(), CrepanHomepage::$hot_news_image_size)[0]; ?>"></div>
   <?php endwhile; ?>
   <?php $the_query->rewind_posts(); ?>
   </div>
@@ -108,6 +82,38 @@
       <?php endwhile; ?>
 </section>
     </div>
+
+
+    <div class="col-md-3 col-md-pull-9">
+      <div class="panel panel-crepan">
+	<div class="panel-heading">Nos réseaux</div>
+	<div class="list-group">
+          <?php foreach (get_terms('network', array('hide_empty' => false)) as $term): ?>
+	  <a class="list-group-item list-group-network-<?php echo $term->slug?>" 
+             href="<?php echo esc_url(get_term_link($term)); ?>">
+	    <?php echo $term->name ?>
+	  </a>
+          <?php endforeach; ?>
+	</div>
+      </div>
+
+      <form role="search" 
+	    method="get" 
+	    action="<?php echo esc_url(home_url('/')); ?>">
+
+	<div class="form-group">
+	  <div class="input-group">
+	    <input type="text" class="form-control"
+		   name="s"
+		   placeholder="Rechercher dans le site">
+	    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+	  </div>
+	</div>
+      </form>
+
+    </div>
+
+
 
   </div>
 
