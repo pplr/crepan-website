@@ -5,17 +5,40 @@
    <?php echo CrepanCarousel::render("carousel-home-header", "carousel-home-header") ?>
       </div>
     </div>
-  </div>
+
+    <?php
+       $args = array(
+       'post_type'  => CrepanQuote::$quote_post_type,
+       'posts_per_page' => 1
+        );
+
+    $quotes = get_posts( $args );
+    foreach ( $quotes as $quote ) :?>
+    <blockquote class="homepage-quote">
+      <p><?php echo $quote->post_excerpt ?></p>
+      <?php $authors = wp_get_post_terms($quote->ID,
+      CrepanQuote::$quote_author_taxonomy); ?>
+      <footer><cite class="homepage-quote-author"><?php echo implode(", ", array_map(function($tax){return
+      $tax->name;}, $authors)); ?>
+      </cite></footer>
+    </blockquote>
+    <?php endforeach; ?>
 </div>
+
+
 
 <div class="container">
   <div class="row">
     <div class="col-md-9 col-md-push-3">
 
    <?php 
+
+   $sticky = get_option( 'sticky_posts' );
    $args = array(
 		 'post_type'  => 'post',
-		 'posts_per_page' => 6,
+		 'posts_per_page' => 3,
+                 'post__in'  => $sticky,
+                 'ignore_sticky_posts' => 1,
 		 'meta_query' => array(
 				       array(
 					     'key' => '_thumbnail_id',
@@ -26,6 +49,7 @@
     $the_query = new WP_Query( $args );?>
 
 <?php if ( $the_query->have_posts() ) : ?>
+
 <div id="home-actu-carousel" class="slide carousel carousel-hot-news "
      data-ride="carousel" data-interval="10000">
   <div class="carousel-inner">
@@ -60,6 +84,7 @@
       <h2>Actualité</h2>
 
       <?php $args = array(
+    'ignore_sticky_posts' => 1,
     'numberposts' => 10,
     'orderby' => 'post_date',
     'order' => 'DESC',
@@ -85,31 +110,9 @@
 
 
     <div class="col-md-3 col-md-pull-9">
-      <div class="panel panel-crepan">
-	<div class="panel-heading">Nos réseaux</div>
-	<div class="list-group">
-          <?php foreach (get_terms('network', array('hide_empty' => false)) as $term): ?>
-	  <a class="list-group-item list-group-network-<?php echo $term->slug?>" 
-             href="<?php echo esc_url(get_term_link($term)); ?>">
-	    <?php echo $term->name ?>
-	  </a>
-          <?php endforeach; ?>
-	</div>
-      </div>
 
-      <form role="search" 
-	    method="get" 
-	    action="<?php echo esc_url(home_url('/')); ?>">
+      <?php dynamic_sidebar('sidebar-primary'); ?>
 
-	<div class="form-group">
-	  <div class="input-group">
-	    <input type="text" class="form-control"
-		   name="s"
-		   placeholder="Rechercher dans le site">
-	    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-	  </div>
-	</div>
-      </form>
 
     </div>
 

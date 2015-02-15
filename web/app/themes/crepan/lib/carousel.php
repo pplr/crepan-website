@@ -65,37 +65,35 @@ class CrepanCarousel{
 		}
 		);
     add_filter('manage_'.self::$carousel_item_post_type.'_posts_columns', function($defaults) {  
-	$defaults[$featured_image_column_name] = __('Featured Image', 'crepan');
+	$defaults[self::$featured_image_column_name] = __('Featured Image', 'crepan');
 	return $defaults;  
       }  
       );  
 
-    add_action('manage_'.self::$carousel_item_post_type.'posts_custom_column', function($column_name, $post_ID) {  
-	if ($column_name == $featured_image_column_name) {  
-	  $post_featured_image = get_featured_image($post_ID);  
+    add_action('manage_'.self::$carousel_item_post_type.'_posts_custom_column', function($column_name, $post_ID) {  
+	if ($column_name == self::$featured_image_column_name) {  
+	  $post_featured_image = self::get_featured_image($post_ID);  
 	  if ($post_featured_image) {  
-	    echo '<a href="'.get_edit_post_link($post_ID).'"><img src="' . $post_featured_image . '" /></a>';  
+	    echo '<img src="' . $post_featured_image . '" />';
 	  }  
 	}  
       }, 10, 2);
   add_action("add_meta_boxes", 
 	     function(){
-	       add_meta_box("item_image_url", "Image Link URL", function(){
-		   global $post;
-		   render_image_url_metabox($post);
+	       add_meta_box("item_image_url", "Image Link URL", function($post){
+		   CrepanCarousel::render_image_url_metabox($post);
 		     }, 
 		 CrepanCarousel::$carousel_item_post_type, "side", "low");
 	     }
 	     );
-  add_action('save_post', function(){
-      global $post;
+  add_action("save_post", function($post_ID){
       if (isset($_POST[CrepanCarousel::$item_image_url_meta])) {
 	$openblank = 0;
 	if(isset($_POST[CrepanCarousel::$item_image_url_openblank_meta]) && $_POST[CrepanCarousel::$item_image_url_openblank_meta] == '1'){
 	  $openblank = 1;
 	}
-	update_post_meta($post->ID, CrepanCarousel::$item_image_url_meta, esc_url($_POST[CrepanCarousel::$item_image_url_meta]));
-	update_post_meta($post->ID, CrepanCarousel::$item_image_url_openblank_meta, $openblank);
+	update_post_meta($post_ID, CrepanCarousel::$item_image_url_meta, esc_url($_POST[CrepanCarousel::$item_image_url_meta]));
+	update_post_meta($post_ID, CrepanCarousel::$item_image_url_openblank_meta, $openblank);
       }
     }
     );
@@ -115,7 +113,7 @@ class CrepanCarousel{
 
 
   // Extra admin field for image URL
-  public static function render_image_url_metabox(){
+  public static function render_image_url_metabox($post){
     $custom = get_post_custom($post->ID);
     $item_image_url = isset($custom[CrepanCarousel::$item_image_url_meta]) ?  $custom[CrepanCarousel::$item_image_url_meta][0] : '';
     $item_image_url_openblank = isset($custom[CrepanCarousel::$item_image_url_openblank_meta]) ?  
@@ -152,7 +150,7 @@ class CrepanCarousel{
 	$post_id = get_the_ID();
 	$title = get_the_title();
 	$content = get_the_excerpt();
-	$image = get_the_post_thumbnail( get_the_ID(), self::$carousel_image_size);
+	$image = get_the_post_thumbnail( get_the_ID(), CrepanCarousel::$carousel_image_size);
 	$url = get_post_meta(get_the_ID(), 'cptbc_image_url', true);
 	$url_openblank = get_post_meta(get_the_ID(), 'cptbc_image_url_openblank', true);
 	$images[] = array('post_id' => $post_id, 
