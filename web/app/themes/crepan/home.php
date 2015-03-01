@@ -46,7 +46,9 @@
 					     )
 				       )
 		 );
-    $the_query = new WP_Query( $args );?>
+  $the_query = new WP_Query( $args );
+  $home_actu_carousel_post_ids = array_map(function($p){return $p->ID;}, $the_query->get_posts());
+?>
 
 <?php if ( $the_query->have_posts() ) : ?>
 
@@ -83,8 +85,7 @@
 <section>
       <h2>Actualité</h2>
 
-      <?php $args = array(
-    'ignore_sticky_posts' => 1,
+      <?php $args = array('post__not_in' => $home_actu_carousel_post_ids,
     'numberposts' => 10,
     'orderby' => 'post_date',
     'order' => 'DESC',
