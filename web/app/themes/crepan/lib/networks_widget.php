@@ -18,7 +18,12 @@ class Crepan_NetworksWidget extends WP_Widget {
 	    echo '</a>';
 	  }
 	  echo '</div>';
+	  echo '<div class="panel-body">';
+	  echo '<div class="text-center">Partenaire</div>';
+	  echo CrepanPartner::render("carousel-partner", "carousel-partner");
 	  echo '</div>';
+          echo '</div>';
+
 	}
 
 	function update( $new_instance, $old_instance ) {
