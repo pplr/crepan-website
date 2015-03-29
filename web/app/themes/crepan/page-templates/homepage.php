@@ -89,7 +89,7 @@
 	<section>
 	  <h2>Actualité</h2>
 	  <?php $args = array('post__not_in' => $home_actu_carousel_post_ids,
-	  'numberposts' => 5,
+	  'posts_per_page' => 5,
 	  'orderby' => 'post_date',
 	  'order' => 'DESC',
 	  'post_type' => 'post',
