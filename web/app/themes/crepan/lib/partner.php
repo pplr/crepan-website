@@ -27,7 +27,7 @@ class CrepanPartner{
 			);
 	$args = array(
 		      'labels' => $labels,
-		      'public' => true,
+		      'public' => false,
 		      'exclude_from_search' => true,
 		      'publicly_queryable' => false,
 		      'show_ui' => true, 

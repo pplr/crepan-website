@@ -12,7 +12,7 @@ class Crepan_NetworksWidget extends WP_Widget {
 	  echo '<div class="panel-heading">Nos réseaux</div>';
 	  echo '<div class="list-group">';
           foreach (get_terms('network', array('hide_empty' => false)) as $term){
-	    echo '<a class="list-group-item list-group-network-' . $term->slug . '"';
+	    echo '<a class="list-group-item list-group-network list-group-network-' . $term->slug . '"';
 	    echo 'href="' . esc_url(get_term_link($term)) . '">';
 	    echo $term->name;
 	    echo '</a>';

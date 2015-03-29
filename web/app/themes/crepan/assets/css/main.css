@@ -1,5 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Open+Sans+Condensed:300,700,300italic");
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -8327,6 +8326,11 @@ figure.alignnone {
 }
 .network-icon-large.network-icon-sante {
   background-position: -22px -102px;
+}
+.list-group-network {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
 }
 .list-group-network-agriculture {
   background-image: url("../img/network-agriculture.svg");

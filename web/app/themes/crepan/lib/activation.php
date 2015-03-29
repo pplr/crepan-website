@@ -18,7 +18,7 @@ add_action('admin_init', 'roots_theme_activation_options_init');
 function roots_activation_options_page_capability($capability) {
   return 'edit_theme_options';
 }
-add_filter('option_page_capability_roots_activation_options', 'roots_activation_options_page_capability');
+/* add_filter('option_page_capability_roots_activation_options', 'roots_activation_options_page_capability'); */
 
 function roots_theme_activation_options_add_page() {
   $roots_activation_options = roots_get_theme_activation_options();

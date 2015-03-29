@@ -51,7 +51,6 @@
 	"vlucas/phpdotenv": "1.0.9",
 	"wpackagist-plugin/wordpress-importer":"*",
 	"wpackagist-plugin/event-organiser":"*",
-	"wpackagist-plugin/event-list-calendar": "*",
         "wpackagist-plugin/simple-image-sizes": "*",
 	"koodimonni-language/fr_fr": "*"
     },

@@ -12,22 +12,22 @@ class CrepanCarousel{
   public static function init(){
     add_action('init', function() {
 	$labels = array(
-			'name' => __('Carousel Images', 'crepan-theme'),
-			'singular_name' => __('Carousel Image', 'crepan-theme'),
-			'add_new' => __('Add New', 'crepan-theme'),
-			'add_new_item' => __('Add New Carousel Item', 'crepan-theme'),
-			'edit_item' => __('Edit Carousel Item', 'crepan-theme'),
-			'new_item' => __('New Carousel Item', 'crepan-theme'),
-			'view_item' => __('View Carousel Item', 'crepan-theme'),
-			'search_items' => __('Search Carousel Items', 'crepan-theme'),
-			'not_found' => __('No Carousel Item', 'crepan-theme'),
-			'not_found_in_trash' => __('No Carousel Items found in Trash', 'crepan-theme'),
+			'name' => 'Diapositives',
+			'singular_name' => 'Diapositive',
+			'add_new' => 'Ajouter',
+			'add_new_item' => 'Ajouter diapositive',
+			'edit_item' => 'Modifier la diapositive',
+			'new_item' => 'Nouvelle diapositive',
+			'view_item' => 'Afficher la diapositive',
+			'search_items' => 'Rechercher une diapositive',
+			'not_found' => 'Aucune diapositive',
+			'not_found_in_trash' => 'Aucune diapositive',
 			'parent_item_colon' => '',
-			'menu_name' => __('Carousel Items', 'crepan-theme')
+			'menu_name' => 'Diaporama'
 			);
 	$args = array(
 		      'labels' => $labels,
-		      'public' => true,
+		      'public' => false,
 		      'exclude_from_search' => true,
 		      'publicly_queryable' => false,
 		      'show_ui' => true, 
@@ -38,6 +38,7 @@ class CrepanCarousel{
 		      'has_archive' => true, 
 		      'hierarchical' => false,
 		      'menu_position' => 21,
+		      'menu_icon' => 'dashicons-images-alt2',
 		      'supports' => array('title','excerpt','thumbnail', 'page-attributes')
 		      ); 
 	register_post_type(self::$carousel_item_post_type, $args);
