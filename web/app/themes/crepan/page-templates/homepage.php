@@ -106,9 +106,15 @@
 	    </a>
 	  </article>
 	  <?php endwhile; ?>
-		<?php if(get_option("show_on_front") == "page") : ?>
-		    <p><a href="<?php echo get_permalink(get_option("page_for_posts"))?>">Voir tous les articles</a></p>
-		    <?php endif; ?>
+	  <?php if(get_option("show_on_front") == "page") : ?>
+	  <nav class="post-nav">
+	    <ul class="pager">
+	      <li class="next">
+		<a href="<?php echo get_permalink(get_option("page_for_posts"))?>">Voir tous les articles</a>
+	      </li>
+	    </ul>
+	  </nav>
+	  <?php endif; ?>
 
 	</section>
       </div>
