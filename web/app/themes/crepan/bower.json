@@ -13,10 +13,11 @@
     "assets/vendor"
   ],
   "dependencies": {
-    "modernizr": "2.8.2",
-    "jquery": "1.11.1",
-    "bootstrap": "3.2.0",
+    "modernizr": "~2.8.2",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
     "respond": "1.4.2",
-    "font-awesome": "~4.1.0"
+    "font-awesome": "~4.3.0",
+    "rrssb": "~1.8.5"
   }
 }

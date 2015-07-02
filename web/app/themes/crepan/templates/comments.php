@@ -4,7 +4,7 @@
   }
 ?>
 
-<section id="comments">
+<section class="post-comments">
   <?php if (have_comments()) : ?>
     <h3><?php printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></h3>
 
@@ -37,7 +37,7 @@
   <?php endif; ?>
 </section><!-- /#comments -->
 
-<section id="respond">
+<section class="post-respond">
   <?php if (comments_open()) : ?>
     <h3><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
     <p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>

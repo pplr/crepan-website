@@ -36,6 +36,8 @@ unset($file, $filepath);
 require_once locate_template('/lib/taxonomies.php');
 require_once locate_template('/lib/carousel.php');
 require_once locate_template('/lib/partner.php');
+require_once locate_template('/lib/volunteer.php');
 require_once locate_template('/lib/homepage.php');
 require_once locate_template('/lib/networks_widget.php');
 require_once locate_template('/lib/quote.php');
+require_once locate_template('/lib/meta.php');

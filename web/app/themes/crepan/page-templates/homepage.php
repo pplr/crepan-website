@@ -33,7 +33,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-7 col-lg-push-2 col-md-9 col-md-push-3">
+      <div class="col-lg-7 col-lg-push-2 col-md-8 col-md-push-4">
 
 	<?php 
 
@@ -61,7 +61,7 @@
 	  <div class="carousel-inner">
 	    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 	    <div class="item <?php if($the_query->current_post == 0){echo "active";}?>" data-slide-number="<?php echo $the_query->current_post; ?>">
-	      <img class="img-rounded" src="<?php echo
+	      <img src="<?php echo
 					    wp_get_attachment_image_src(get_post_thumbnail_id(), CrepanHomepage::$hot_news_image_size)[0]; ?>"></div>
 	    <?php endwhile; ?>
 	    <?php $the_query->rewind_posts(); ?>
@@ -96,13 +96,26 @@
 	  'post_status' => 'publish' );
 	  $the_query = new WP_Query( $args );
 	  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-	  <article class="home-article">
+	  <article <?php post_class("home-article"); ?>>
 	    <a href="<?php the_permalink() ?>">
+	      <?php if(has_tag( 'communique-fne' )) : ?>
 	      <header>
-		<time datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(''); ?></time>
-		<h3><?php the_title() ?></h3>
+		Communiqué de presse France Nature Environnement
+		<h3><?php the_title(); ?></h3>
+		<time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date('l j F Y'); ?></time>
 	      </header>
-	      <?php the_excerpt() ?>
+	      <?php else : ?>
+	      <header>
+		<h3><?php the_title() ?></h3>
+		<time datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(''); ?></time>
+	      </header>
+	      <?php endif; ?>
+	      <?php if ( has_post_thumbnail() ) : ?>
+		<div class="article-featured-image">
+		   <?php the_post_thumbnail(CrepanHomepage::$article_image_size, array('class' => " img-responsive")); ?>
+	        </div>
+	      <?php endif; ?>
+              <?php the_excerpt() ?>
 	    </a>
 	  </article>
 	  <?php endwhile; ?>
@@ -118,10 +131,10 @@
 
 	</section>
       </div>
-      <div class="col-lg-2 col-lg-pull-7 col-md-3 col-md-pull-9 col-xs-6">
+      <div class="col-lg-2 col-lg-pull-7 col-md-4 col-md-pull-8 col-xs-6">
 	<?php dynamic_sidebar('sidebar-primary'); ?>
       </div>
-      <div class="col-lg-3 col-lg-pull-0 col-md-3 col-md-pull-9 col-xs-6">
+      <div class="col-lg-3 col-lg-pull-0 col-md-4 col-md-pull-8 col-xs-6">
 	<?php dynamic_sidebar('sidebar-secondary'); ?>
       </div>
     </div>

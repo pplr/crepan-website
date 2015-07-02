@@ -1,15 +1,15 @@
 <header class="top-header navbar navbar-compact">
   <div class="container">
-    <!-- <nav class="top-header-nav"> -->
-    <!--   <ul class="nav navbar-nav navbar-right"> -->
-    <!--     <li class="social-link"><a href="#"><i class="fa fa-facebook-square"></i></a></li> -->
-    <!--     <li class="social-link"><a href="#"><i class="fa fa-google-plus-square"></i></a></li> -->
-    <!--     <li class="social-link"><a href="#"><i class="fa fa-rss"></i></a></li> -->
-    <!-- 	<li><a href="#">Espace membre</a></li> -->
-    <!-- 	<li><a href="#">S’inscrire</a></li> -->
+    <nav class="top-header-nav">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="social-link"><a href="https://fr-fr.facebook.com/pages/Crepan/280415762024624"><i class="fa fa-facebook-square"></i></a></li>
+        <!-- <li class="social-link"><a href=""><i class="fa fa-google-plus-square"></i></a></li> -->
+        <li class="social-link"><a href="<?php bloginfo('atom_url'); ?>"><i class="fa fa-rss"></i></a></li>
+    	<!-- <li><a href="#">Espace membre</a></li> -->
+    	<!-- <li><a href="#">S’inscrire</a></li> -->
 
-    <!--   </ul> -->
-    <!-- </nav> -->
+      </ul>
+    </nav>
    <p class="top-header-text">Comité Régional d’Étude pour la Protection et l’Aménagement de la Nature en Basse-Normandie</p>
 
   </div>

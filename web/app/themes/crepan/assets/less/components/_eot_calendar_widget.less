@@ -13,12 +13,34 @@
    tbody{
      td{
        text-align: center;
+       font-size: 12px;
+       width: 14.2857%;
+       vertical-align: middle;       
+       &:before{
+	 content:"";
+	 display: inline-block;
+	 position: relative;
+	 top:0;
+	 left:0;
+	 width: 1px;
+	 padding-top: 100%;
+	 vertical-align: middle;
+       }
        &.event{
 	 a{
+	   vertical-align: middle;
 	   font-weight: bold;
 	   text-decoration: none;
+	   background-color: #d9534f;
+	   color: #fff;
+	   border-radius: 15px;
+	   display: inline-block;
+	   width: 20px;
+	   height: 20px;
+	   line-height: 20px;	   
 	 }
        }
+
      }
    }
 
